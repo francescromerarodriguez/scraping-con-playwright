@@ -24,7 +24,7 @@ const shops = [
         await page.goto(url);
 
         //Hacemos una captura de lo que carga el navegador
-        await page.screenshot({ path: `screenshots/${vendor}.png` });
+        await page.screenshot({ path: 'screenshots/${vendor}.png' });
 
         const hasStock = await checkStock({ page });
         console.log(`${vendor}: ${hasStock ? 'Hay stock' : 'Sin stock'}`);
